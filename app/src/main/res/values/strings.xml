@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">memoapp</string>
+    <string name="text1">Name：</string>
+    <string name="edit1">Please input name</string>
+    <string name="text2">Password：</string>
+    <string name="edit2">Please input password</string>
+    <string name="button1">Login</string>
+    <string name="button2">Click here to register</string>
+    <string name="text3">Name：</string>
+    <string name="edit3">Please input name</string>
+    <string name="text4">Password：</string>
+    <string name="edit4">Please input password</string>
+    <string name="button3">Register</string>
+    <string name="button4">Return back to login</string>
+</resources>

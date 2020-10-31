@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">备忘录</string>
+    <string name="text1">用户名：</string>
+    <string name="edit1">请输入用户名</string>
+    <string name="text2">密码：</string>
+    <string name="edit2">请输入密码</string>
+    <string name="button1">登录</string>
+    <string name="button2">点击这里去注册</string>
+    <string name="text3">用户名：</string>
+    <string name="edit3">请输入用户名</string>
+    <string name="text4">密码：</string>
+    <string name="edit4">请输入密码</string>
+    <string name="button3">注册</string>
+    <string name="button4">返回去登录</string>
+</resources>
