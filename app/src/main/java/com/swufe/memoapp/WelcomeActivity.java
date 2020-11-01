@@ -13,8 +13,8 @@ import java.util.TimerTask;
 
 public class WelcomeActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private int recLen = 4;//跳过倒计时提示4秒
-    private TextView text1,text2;
+    private int recLen = 5;//跳过倒计时提示5秒
+    private TextView text;
     private Handler handler;
     private Runnable runnable;
 
@@ -36,16 +36,16 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
             @Override
             public void run() {
                 //从闪屏界面跳转到首界面
-                Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
+                Intent intent = new Intent(WelcomeActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }
-        }, 4000);//延迟4S后发送handler信息
+        }, 5000);//延迟5S后发送handler信息
     }
 
     private void initView() {
-        text1 = findViewById(R.id.text1);//跳过
-        text1.setOnClickListener(this);//跳过监听
+        text = findViewById(R.id.text);//跳过
+        text.setOnClickListener(this);//跳过监听
     }
 
         TimerTask task = new TimerTask() {
@@ -56,10 +56,10 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
                 @Override
                 public void run() {
                     recLen--;
-                    text1.setText("跳过 " + recLen);
+                    text.setText("点击跳过 " + recLen);
                     if (recLen < 0) {
                         timer.cancel();
-                        text1.setVisibility(View.GONE);//倒计时到0隐藏字体
+                        text.setVisibility(View.GONE);//倒计时到0隐藏字体
                     }
                 }
             });
@@ -70,9 +70,9 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.text1:
+            case R.id.text:
                 //从闪屏界面跳转到首界面
-                Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
+                Intent intent = new Intent(WelcomeActivity.this,LoginActivity.class);
                 startActivity(intent);
                 finish();
                 if (runnable != null) {
